@@ -13,12 +13,16 @@ default['vsftpd']['configfile'] = value_for_platform_family(
 
 # Only allow access to certain users
 # Default: no users are allowed to access FTP
-default['vsftpd']['allowed'] = [ ]
+default['vsftpd']['allowed'] = [
+  # 'vagrant'
+]
 
 # Depending on configuration of vsftpd allow users to run
 # non-chroot or defines users that have to be chroot'ed
 # Default: chroot all users but those defined here
-default['vsftpd']['chroot'] = [ ]
+default['vsftpd']['chroot'] = [
+  # 'vagrant'
+]
 
 
 ######### SSL ########

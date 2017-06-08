@@ -1,7 +1,11 @@
 # vi: set ft=ruby :
-source 'https://supermarket.getchef.com'
+source 'https://gdp-chef-supermarket.gannettdigital.com'
 
 metadata
 
 cookbook  'openssl',	git: 'https://github.com/opscode-cookbooks/openssl.git'
-cookbook  'apt', '>= 3.0'
+cookbook  'yum'
+
+group :integration do
+  cookbook 'gd-test-helper'
+end

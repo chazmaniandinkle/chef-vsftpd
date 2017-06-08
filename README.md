@@ -10,9 +10,6 @@ Requirements
 ## Platform:
 
 * CentOS
-* RHEL
-* Debian
-* Ubuntu
 
 ## Cookbooks:
 
@@ -165,7 +162,7 @@ Recipes
 
 ## vsftpd::default
 
-Installs/configures vsftpd, includes some sub-tasks via `include_recipe`. 
+Installs/configures vsftpd, includes some sub-tasks via `include_recipe`.
 
 Known Issue
 ===========
@@ -180,7 +177,7 @@ There are some workarounds to overcome this problem:
 
 The basic gist of these articles:
 
-* revoke write permissions on the users home 
+* revoke write permissions on the users home
 * setup a different chroot environment via `passwd_chroot_enable=YES`
 * install a patched version of the vsftpd 2.x branch and set
   `allow_writeable_chroot=YES` to ignore this error
@@ -229,7 +226,7 @@ can review the boxes by using:
 To run the full kitchen suite included in this cookbook simply execute:
 
     $ bundle exec kitchen test
-    
+
 You can also verify/converge/test any specific machine from the previous list output:
 
     $ bundle exec kitchen verify <instance>
@@ -239,7 +236,7 @@ License and Author
 
 Author:: Sebastian Grewe (<sebastian.grewe@gmail.com>)
 
-Copyright:: 2013, Sebastian Grewe 
+Copyright:: 2013, Sebastian Grewe
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
